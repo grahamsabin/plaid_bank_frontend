@@ -6,6 +6,8 @@ import Items from "./Components/ProductTypes/Items";
 import Context from "./Context";
 
 import styles from "./App.module.scss";
+import Navbar from "./Components/Design/Navbar";
+import { render } from "@testing-library/react";
 
 const App = () => {
   const { linkSuccess, isItemAccess, dispatch } = useContext(Context);
@@ -79,19 +81,23 @@ const App = () => {
     init();
   }, [dispatch, generateToken, getInfo]);
 
+  
   return (
     <div className={styles.App}>
+      
       <div className={styles.container}>
+        
         <Header />
         {linkSuccess && isItemAccess && (
           <>
             <Products />
-            <Items />
+            {/* <Items /> */}
           </>
         )}
       </div>
     </div>
   );
+        
 };
 
 export default App;

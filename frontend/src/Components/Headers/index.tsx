@@ -21,19 +21,18 @@ const Header = () => {
 
   return (
     <div className={styles.grid}>
-      <h3 className={styles.title}>Plaid Quickstart</h3>
+      <h3 className={styles.title}>Plaid Frontend</h3>
 
       {!linkSuccess ? (
         <>
           <h4 className={styles.subtitle}>
-            A sample end-to-end integration with Plaid
+            A personal banking app with Plaid.
           </h4>
           <p className={styles.introPar}>
-            The Plaid flow begins when your user wants to connect their bank
-            account to your app. Simulate this by clicking the button below to
-            launch Link - the client-side component that your users will
-            interact with in order to link their accounts to Plaid and allow you
-            to access their accounts via the Plaid API.
+            While a user would typically see this screen after logging in, for the sake
+            of demonstration, we will go to postman in order to look at a succesful login
+            and registrations sequence. Once completed, click the button below to see view
+            the frontend app.
           </p>
           {/* message if backend is not running and there is no link token */}
           {!backend ? (
